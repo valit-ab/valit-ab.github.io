@@ -1,5 +1,15 @@
 .valit-logo {
 	font-size: 30px !important;
-	font-weight: bolder!important;
+	font-weight: bold;
 	padding-right: 10px;
+}
+
+.large-thin-text {
+	font-size: 30px;
+	font-weight: lighter;
+}
+
+.large-normal-text {
+    font-size: 20px !important;
+    font-weight: lighter !important;
 }

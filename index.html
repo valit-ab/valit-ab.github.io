@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+	
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,17 @@
     <title>Valit - The Future of Receipts</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	  
+	<!--Custom CSS-->
     <link href="css/fonts.css" rel="stylesheet">
     <link href="css/colors.css" rel="stylesheet">
     <link href="css/backgrounds.css" rel="stylesheet">
-	 <link rel="stylesheet" href="https://use.typekit.net/snh6jnd.css">
+	<link href="css/formatting.css" rel="stylesheet">
+	  
+	<!--Adobe Fonts-->
+	<link rel="stylesheet" href="https://use.typekit.net/snh6jnd.css">
+	  
+	
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light background-valit-gray">
@@ -36,12 +44,26 @@
       </div>
     </nav>
     <header>
-      <div class="jumbotron justify-content-center video-wrapper">
-			<video autoplay loop muted class="valit-banner-video">
+      <div class="jumbotron justify-content-center video-wrapper background-valit-black square-corners banner-video">
+			<video autoplay loop muted class="valit-banner-video ">
 			<source src="images/Sequence 01_3.mp4" type="video/mp4">  
 			</video>
       </div>
     </header>
+    <section>
+		<div class="jumbotron background-valit-black">
+			  <div class="container padding-small">
+				  <div class="row">
+					<div class="text-center col-md-8 col-12 mx-auto">
+						<h3 class="padding-bottom-very-small large-thin-text color-white">Business? POS system? See our for-business page here:</h3>
+					</div>
+				  </div>
+				  <div class="row">
+						<div class="col-sm-3 col-auto mx-auto"> <a class="tk-brother-1816 btn-2 btn-block btn-success-valit color-valit-background large-normal-text" href="#" title="">BUSINESS PAGE</a> </div>
+				  </div>
+			  </div>
+			</div>
+    </section>
     <section>
       <div class="container">
         <div class="row">
@@ -171,4 +193,9 @@
     <script src="js/popper.min.js"></script> 
     <script src="js/bootstrap-4.4.1.js"></script>
   </body>
+	
+  <style type="text/css">
+  	body { background: #13131d !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+  </style>
 </html>
+

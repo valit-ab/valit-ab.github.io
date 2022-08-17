@@ -1,0 +1,57 @@
+.padding-small {
+	padding-top: 20px;
+	padding-bottom: 60px;
+}
+.padding-bottom-very-small {
+	padding-bottom: 20px;
+}
+
+.btn-2 {
+  display: inline-block;
+  font-weight: 300;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-success-valit {
+  background-color: black;
+  border-color: #28a745;
+}
+
+.btn-success-valit:hover {
+  color: #fff;
+  background-color: #59b580 !important;
+  text-decoration: none;
+}
+
+.btn-success-valit:focus, .btn-success.focus {
+  color: black;
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.square-corners {
+	border-radius: 0px !important;
+}
+
+.banner-video {
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+	padding-top: 0px !important;
+}
+
+.no-padding-top {
+	padding-top: 0px !important;
+}
