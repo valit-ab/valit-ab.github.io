@@ -4,6 +4,14 @@
 	padding-right: 10px;
 }
 
+.navbar-item-valit {
+	font-size: 20px !important;
+	font-weight: lighter;
+	display: block;
+  	padding: 0 0 0 1.5rem;
+	transition: color 0.20s ease-in-out
+}
+
 .large-thin-text {
 	font-size: 30px;
 	font-weight: lighter;
