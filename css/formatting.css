@@ -6,6 +6,10 @@
 	padding-bottom: 20px;
 }
 
+.padding-bottom-small {
+	padding-bottom: 60px;
+}
+
 .btn-2 {
   display: inline-block;
   font-weight: 300;
