@@ -21,3 +21,46 @@
     font-size: 20px !important;
     font-weight: lighter !important;
 }
+.large-bold-text {
+    font-size: 28px !important;
+    font-weight: bold !important;
+}
+
+.medium-text {
+	font-size: 20px;
+}
+
+.statistic-header {
+	font-weight: bold;
+	font-size: 55px;
+}
+
+.statistic-title {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.statistic-subtext {
+	font-weight: lighter;
+	font-size: 30px;
+}
+
+.infographic-subtext {
+	font-size: 20px;
+	font-weight: 100;
+}
+
+.business-page-text {
+	font-size: 45px;
+	font-weight: normal;
+}
+
+.partner-text {
+	font-size: 50px;
+}
+
+.partner-description {
+	color: white;
+	font-size: 20px;
+	width: auto;
+}
