@@ -148,8 +148,19 @@
 }
 
 .banner-logo {
-	position: absolute;
-	width: 10%;
-	height: auto;
-	z-index: 100000;
+	height: 70px;
+}
+.banner-text {
+	position:absolute;
+	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+    z-index:1;
+	font-size: 6.5vw;
+	font-weight: bold;
+}
+.overlay {
+    position:absolute;
+    z-index:1;
+	top: 100px;
 }
