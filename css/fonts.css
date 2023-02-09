@@ -64,3 +64,16 @@
 	font-size: 20px;
 	width: auto;
 }
+
+.follow-text {
+	font-size: 15px;
+	font-weight: bold
+}
+
+.bold {
+	font-weight: bolder !important;
+}
+
+.vision-text {
+	font-size: 20px;
+}
