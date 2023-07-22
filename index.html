@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valit</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="icon" sizes="32x32" type="image/png" href="./assets/Images/favicon.png" />
+
+</head>
+
+    <body>
+
+
+        <nav>
+                    
+            <a  class="logolink" href="#"><img src="./assets/Images/Valitnotext2.png" class="logo"> <h1 class="logo-text">Valit</h1></a>
+            <ul>
+                <li><a href="#integration">Integration</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#partners">Partners</a></li>
+                <li><a href="#aboutUs">About Us</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+                <a href="#" class="btn3">Dashboard</a>
+
+            </ul>
+
+        </nav>
+
+        <div id="header">
+
+            <div class="videoholder">
+                <video autoplay muted loop plays-inline id="headervideo">
+                    <source src="./assets/Images/valit_banner_video.mp4" type="video/mp4">
+                    
+                </video>
+            </div>
+              
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="headertexts">
+                        <div class="header-text">
+                            <h1>Modernize Your Business With Digital <span class="header-text-coloured">Receipts</span></h1>
+                            <p>Want to save money while providing a sustainable and modern shopping experience to your loyal customers?</p>
+                            
+                        </div>
+                        <div class="btngroup">
+                            <a href="#pricing" class="btn1">Get Started</a>
+                            <a href="#integration" class="btn2">How does it work?</a>
+                        </div>
+                    </div>
+
+                </div>
+                
+                
+            </div>
+
+
+        </div>
+        
+
+
+<!------Nature/effects------->
+        <div id="info-nature">
+            <div class="container">
+                <div class="row">
+
+                    <div class="nature-col-1">
+                        <img src="assets/Images/forest2.png">
+                    </div>
+                    <div class="nature-col-2">
+                        <h1 class="sub-title">The Hidden Cost of Paper Receipts</h1>
+                        <p>
+                            The impact of paper receipts on the environment is often overseen and underestimated. 
+                            <br>This may be because of their small presence — most of us rarely think about them.
+                            <br>In reality, most paper receipts end up being thrown away right after the purchase is made.<br>
+                            However, they cost much more than we realize.<br>Valit aims to solve this, while making receipts easier and better for everyone!
+                            
+                        </p>
+
+                        <!----in opentap(x,y) the second param specifies which section it is. "1" represens nature/this section. "2" represents the about section--->
+                        <div class="tab-titles info-align">
+                            <p class="tab-links nature  active-link" onclick="opentab('CO2', '1')">2,35 Billion kg<br><span class="nature-measurement">CO2</span></p>
+                            <p class="tab-links nature" onclick="opentab('Water', '1')">37,8 Billion L<br><span class="nature-measurement">Water</span></p>
+                            <p class="tab-links nature" onclick="opentab('Trees', '1')">3,680,000<br><span class="nature-measurement">Trees</span></p>
+                            <p class="tab-links nature" onclick="opentab('Waste', '1')">151 Million kg<br><span class="nature-measurement">Waste</span></p>
+                        </div>
+
+
+                        <!----Info---->
+                        <div class="tab-contents nature active-tab" id="CO2">
+                            <h4 class="nature-info-text">
+                                2,35 billion kg of CO2 were emitted by the US alone in 2021!
+                                This is the equivalent to 471,000 cars on the road per year.
+                                Unfortunately, our global emissions will keep increasing to satisfy the demands of the growing retail industry.
+                                <br>
+                                The information is gathered from Green America's "<a href="https://reports.greenamerica.org/skip-the-slip"  target="_blank">Skip the Slip</a>" report.
+                            </h4>
+                        </div>
+
+                        <div class="tab-contents nature" id="Water">
+                            <h4 class="nature-info-text">
+                                In 2021 the US consumed 37,8 billion liters of water to manage and produce paper receipts.
+                                According to the <a target="_blank" href="https://www.un.org/en/climatechange/science/climate-issues/water">UN</a>, we can only use 0.5% of the water on Earth as freshwater.
+                                However, as our population grows the demand will greatly surpass our supply of useable water.
+                                <br>
+                                The information is gathered from Green America's "<a href="https://reports.greenamerica.org/skip-the-slip"  target="_blank">Skip the Slip</a>" report.
+                            </h4>
+                        </div>
+
+                        <div class="tab-contents nature" id="Trees">
+                            <h4 class="nature-info-text">
+                                Forests absorb around 40% of global fossil fuel emissions every year! As trees grow older, their capacity to absord carbon increases.
+                                That is why plating new trees after cutting the older ones, is not a very effective solution in the short term.
+                                Additionally, these old trees release all of the carbon they have stored when they are cut down and processed.
+                                <br>
+                                The information is gathered from Green America's "<a href="https://reports.greenamerica.org/skip-the-slip"  target="_blank">Skip the Slip</a>" report.
+                            </h4>
+                        </div>
+
+                        <div class="tab-contents nature" id="Waste">
+                            <h4 class="nature-info-text">
+                                Paper has generated around 151 million kg of waste in the US alone in 2021.
+                                Millions of gallons of oil have been used to produce paper receipts.
+                                Most consumers throw away paper receipts instantly after purchase!
+                                <br>
+                                The information is gathered from Green America's "<a href="https://reports.greenamerica.org/skip-the-slip"  target="_blank">Skip the Slip</a>" report.
+                            </h4>
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+<!--Integration-->
+        <div id="integration">
+            <div class="container">
+                <h1 class="sub-title">Integration - How does it work?</h1>
+                <div class="processlist">
+
+                    <div>
+                        <span class="material-symbols-outlined">subject</span>
+                        <h2>Register</h2>
+                        <p>The first step is for you to register your business, and provide us some information about your business needs. Start by choosing a pricing plan that suits your business.</p>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined">schedule</span>
+                        <h2>Meeting</h2>
+                        <p>We will update you and give you a clear timeline on when Valit is ready. This is because we have to connect with your point-of-sale (cash-register) provider.</p>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined">campaign</span>
+                        <h2>Advertise</h2>
+                        <p>Let your loyal customers know that they can receive their receipts via Billo. Your cash-register will automatically send the receipt digitally if the customer is connected to Billo.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+<!----Pricing----->
+        <div id="pricing">
+            <div class="container">
+                <h1 class="sub-title">Pricing</h1>
+                <div class="row">
+                    <div class="wrapper">
+                        <input type="radio" name="slider" id="tab-1">
+                        <input type="radio" name="slider" id="tab-2" checked>
+                        <input type="radio" name="slider" id="tab-3">
+                        <header>
+                            <label for="tab-1" class="tab-1">Base</label>
+                            <label for="tab-2" class="tab-2">Standard</label>
+                            <label for="tab-3" class="tab-3">Enterprise</label>
+                            <div class="slider">
+                                
+                            </div>
+                        </header>
+                        <div class="cards-area">
+                            <div class="cards">
+
+
+
+
+                                <div class="row2 r1">
+                                    <div class="pricing-details basic">
+                                        <span>0,15</span>
+                                        <p>For smaller retailers</p>
+                                    </div>
+                                    <ul class="features">
+                                        <li><span class="material-symbols-outlined">done</span><span class="feature-text">Unlimited digital receipts</span></li>
+                                        <li><span class="material-symbols-outlined">done</span><span class="feature-text">2 month completely free</span></li>
+                                        <li><span class="material-symbols-outlined">done</span><span class="feature-text">24/7 customer support</span></li>
+                                        
+                                    </ul>
+                                </div>
+
+
+
+                                <div class="row2 r2">
+                                    <div class="pricing-details standard">
+                                        <span>0,2</span>
+                                        <p>For medium-sized retailers</p>
+                                    </div>
+                                    <ul class="features">
+                                        <li><span class="material-symbols-outlined">done</span><span class="feature-text">Unlimited digital receipts</span></li>
+                                        <li><span class="material-symbols-outlined">done</span><span class="feature-text">Custom receipt design</span></li>
+                                        <li><span class="material-symbols-outlined">done</span><span class="feature-text">Data analysis — Beta Access</span></li>
+                                        <li><span class="material-symbols-outlined">done</span><span class="feature-text">2 months completely free</span></li>
+                                        <li><span class="material-symbols-outlined">done</span><span class="feature-text">24/7 customer support</span></li>
+                                    
+                                    </ul>
+                                </div>
+
+
+
+
+                                <div class="row2 r3">
+                                    <div class="pricing-details enterprise">
+                                        <span>Custom</span>
+                                        <p>For enterprises</p>
+                                    </div>
+                                    <ul class="features">
+                                        <li><span class="material-symbols-outlined">done</span><span class="feature-text">Unlimited digital receipts</span></li>
+                                        <li><span class="material-symbols-outlined">done</span><span class="feature-text">Tailored price for your different stores</span></li>
+                                        <li><span class="material-symbols-outlined">done</span><span class="feature-text">Custom receipt design</span></li>
+                                        <li><span class="material-symbols-outlined">done</span><span class="feature-text">Data analysis — Beta Access</span></li>
+                                        <li><span class="material-symbols-outlined">done</span><span class="feature-text">2 months completely free</span></li>
+                                        <li><span class="material-symbols-outlined">done</span><span class="feature-text">24/7 customer support</span></li>
+                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <button>Choose plan</button>
+                    </div>
+                    <div class="price-comparison">
+                        <h1 class="sub-title">Save money with Valit</h1>
+                        <p class="pricing-paragraph">The average cost to print one paper receipt is 0.5 SEK. This is not even taking into account all the costs for printer maintenance.<br>The average store with 500 customers per month would spend 250 SEK per month on receipts.<br> By choosing the standard pricing model, the same store would only pay 100 SEK per month, saving 40%! <br>In the time span of one year of using Valit, the store would pay 1200 SEK instead of 3000 SEK.</p>
+                        <p class="pricing-paragraph2">If you feel that our pricing plans do not fit your business, please contact us!<br>We would love to help you by customizing our service for your needs.</p>
+                        <p class="pricing-paragraph2">—Digital receipts for a green retail industry, Valit</p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+        </div>
+
+<!---Partners--->
+        <div id="partners">
+            <div class="container">
+                <h1 class="sub-title">Our Partners</h1>
+                <div class="partner-list">
+                    <div class="partner">
+                        <img src="assets/Images/Valitnotext2.png">
+                        <div class="layer">
+                            <h3>Coming Soon!</h3>
+                            <p>We are constantly working on expanding our network. This is just the start!</p>
+                            <a href="#"><span class="material-symbols-outlined">arrow_outward</span></a>
+                        </div>
+                    </div>
+                    <div class="partner">
+                        <img src="assets/Images/Valitnotext2.png">
+                        <div class="layer">
+                            <h3>Coming Soon!</h3>
+                            <p>We are constantly working on expanding our network. This is just the start!</p>
+                            <a href="#"><span class="material-symbols-outlined">arrow_outward</span></a>
+                        </div>
+                    </div>
+                    <div class="partner">
+                        <img src="assets/Images/Valitnotext2.png">
+                        <div class="layer">
+                            <h3>Coming Soon!</h3>
+                            <p>We are constantly working on expanding our network. This is just the start!</p>
+                            <a href="#"><span class="material-symbols-outlined">arrow_outward</span></a>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+
+        </div>
+
+
+
+<!--About us-->
+        <div id="aboutUs">
+            <div class="container">
+                <div class="row">
+
+                    <div class="about-col-1">
+                        <img src="assets/Images/TeampicLM.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Us</h1>
+                        <p>
+                            Our mission is to modernize the retail industry while combating climate change.
+                            There is no place for paper receipts in the future of retail. Valit was founded by Karam Breji and Elias Singh in 2023, to help modernize the retail industry.
+                        </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Mission', '2')">Mission</p>
+                            <p class="tab-links" onclick="opentab('Contact', '2')">Contact</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="Mission">
+                            <ul>
+                                <li><span>Sustainable retail industry</span><br>Our core mission is to help save our planet by reducing emissions from paper receipts.</li>
+                                <li><span>Modern shopping experience</span><br>We want to help retailers provide a modern shopping experience to their customers.</li>
+                                <li><span>Financially resposnible retail</span><br>By providing digital receipts at a low cost, we want to help retailers save money!</li>
+
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="Contact">
+                            <ul>
+                                <li><span>General inquiries</span><br>support@valit.app</li>
+                                <li><span>Karam Breji, CEO</span><br>Karam@valit.app</li>
+                                <li><span>Elias Singh, COO</span><br>Elias@valit.app</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+        
+       
+
+
+<!-----FAQ------>
+        <div id="FAQ">
+            <div class="container">
+                <h1 class="sub-title">Frequently Asked Questions</h1>
+                <ul id="accordion">
+
+
+                    <li>
+                        <label for="question1" onclick="currenticon('q1')">
+                            How does Valit handle my company data?
+                            <span id="q1" class="material-symbols-outlined operator focus">Add</span>
+                        </label>
+                        <input type="radio" name="accordion" id="question1" checked>
+                        <div class="content">
+                            <p>
+                                We never share or sell your data to any third-parties. All data is encrypted and stored safely, and you can always request a full overview of the data we have stored about you. Read more at <a href="./en/security.html">Security</a>
+                            </p>
+                        </div>
+                    </li>
+
+
+
+                    <li>
+                        <label for="question2" onclick="currenticon('q2')">
+                            How do I change my pricing plan?
+                            <span id="q2"  class="material-symbols-outlined operator">Add</span>
+                            </label>
+                        <input type="radio" name="accordion" id="question2" >
+                        <div class="content">
+                            <p>
+                                That can easily be done on the Dashboard, under 'My plan'. If you encounter problems, contact support (support@valit.app) and we will help you!
+                            </p>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <label for="question3" onclick="currenticon('q3')">
+                            What changes will be made to my cash-register?
+                            <span id="q3" class="material-symbols-outlined operator">Add</span>
+                        </label>
+                        <input type="radio" name="accordion" id="question3" >
+                        <div class="content">
+                            <p>
+                                Your cash-register will not change at all! All purchases work just like before,
+                                 but now the receipt will not be printed if the customer is connected to Billo.
+                            </p>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <label for="question4" onclick="currenticon('q4')">
+                            Are digital receipts a valid proof of purchase? 
+                            <span id="q4" class="material-symbols-outlined operator">Add</span>
+                        </label>
+                        <input type="radio" name="accordion" id="question4" >
+                        <div class="content">
+                            <p>
+                                Yes, they are! Valit, which operates in Sweden, has permission to handle these documents for you digitally. However, if a customer requests a paper receipt, then you have to provide one. Read more at <a target="_blank" href="https://www.skatteverket.se/foretag/drivaforetag/kassaregister/saharanvanderdukassaregistret.4.69ef368911e1304a625800013725.html">Skatteverket.se</a>
+                            </p>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <label for="question5" onclick="currenticon('q5')">
+                            How long does it usually take to get started?
+                            <span id="q5" class="material-symbols-outlined operator">Add</span>
+                        </label>
+                        <input type="radio" name="accordion" id="question5" >
+                        <div class="content">
+                            <p>
+                                The registration process can be done within a few minutes. However, it can take up to 7 work days for Valit to work on your store. This is because we need to connect with your POS-system and payment provider. Note that the times can vary depending on the length of our list of stores to connect. We will however always provide you with updates and a clear scheduele for when Valit is ready. 
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label for="question6" onclick="currenticon('q6')">
+                            Is it completely free to try Valit?
+                            <span id="q6" class="material-symbols-outlined operator">Add</span>
+                        </label>
+                        <input type="radio" name="accordion" id="question6" >
+                        <div class="content">
+                            <p>
+                                Yes! You can try Valit for free for 2 months, and then decide if you want to continue. Your subscription can be managed from the Dashboard, under 'My plan'.
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+                
+        </div>
+
+
+
+
+
+<!----Footer---->
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="Company-info">
+                        <h1 class="sub-title-small name">Valit AB</h1>
+                        <p>Stockholm, founded 2023<br>Org.nr: 293283-233 </p>
+                        <p>—Digital receipts for a green retail industry</p>
+                        <a href="#"><img src="./assets/Images/Valitnotext2.png" class="logo footerlogo"></a>
+                        
+                        
+                    </div>
+
+                    <div class="list-footer">
+                        <h1 class="sub-title-small">Follow Us</h1>
+                        <p>We regularly post updates and information regarding Valit.</p>
+                        <ul>
+                            <li><a href="#">Linkedin</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="list-footer">
+                        <h1 class="sub-title-small">Press</h1>
+                        <p>For press inquiries:</p>
+                        <p>press@valit.app</p>
+                    </div>
+
+                    <div class="list-footer">
+                        <h1 class="sub-title-small">Information</h1>
+                        <li><a href="#">User Agreement</a></li>
+                        <li><a href="./en/privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="./en/security.html">Security</a></li>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <h3>Copyright © Valit AB. All rights reserved.</h3>
+                </div>
+            </div>
+        </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname, section){
+
+            if (section == "2") {
+
+                for(tablink of tablinks) {
+                    if(tablink.classList.contains("nature") == false) {
+                        tablink.classList.remove("active-link")
+                    }
+                }
+                for(tabcontent of tabcontents) {
+                    if(tabcontent.classList.contains("nature") == false) {
+                        tabcontent.classList.remove("active-tab")
+                    }
+                }
+                event.currentTarget.classList.add("active-link")
+                document.getElementById(tabname).classList.add("active-tab")
+            } else {
+
+                for(tablink of tablinks) {
+                    if(tablink.classList.contains("nature") == true) {
+                        tablink.classList.remove("active-link")
+                    }
+                }
+                for(tabcontent of tabcontents) {
+                    if(tabcontent.classList.contains("nature") == true) {
+                        tabcontent.classList.remove("active-tab")
+                    }
+                }
+                event.currentTarget.classList.add("active-link")
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+
+            
+        } 
+
+
+
+
+
+        var questions = document.getElementsByClassName("operator");
+
+        function currenticon(to){
+            for (question of questions) {
+                question.classList.remove("focus")
+                
+            }
+            document.getElementById(to).classList.add("focus")
+        }
+
+        /*Navbar sticky effect*/
+        document.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 0) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+
+            }
+        } )
+
+
+    </script>
+    
+    </body>
+</html>
