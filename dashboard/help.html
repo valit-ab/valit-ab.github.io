@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valit - Dashboard</title>
+    <link rel="stylesheet" href="dashstyles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="icon" sizes="32x32" type="image/png" href="../assets/Images/favicon.png" />
+</head>
+<body>
+    <nav id="Nav">
+        <a  class="logolink" href="#">
+            <img src="../assets/Images/Valitnotext2.png" class="logo">
+            <h1  id="LogotextID" class="logo-text">Valit</h1>
+        </a>
+        <ul>
+            <div>
+                <li><a class="navLink" href="./overview.html"><span class="material-symbols-outlined">home</span>Overview</a></li>
+                <li><a class="navLink" href="./payments.html"><span class="material-symbols-outlined">paid</span>Payments</a></li>
+                <li><a class="navLink" href="#partners"><span class="material-symbols-outlined">receipt</span>Receipt design</a></li>
+                <li><a class="navLink" href="./account.html"><span class="material-symbols-outlined">person</span>Account</a></li>
+                <li><a class="navLink" href="./help.html"><span class="material-symbols-outlined">help</span>Help</a></li>
+                
+            </div>
+            <div class="settingsMenu">
+                <div class="CMholder">
+                    <h4 id="CMtitle" >Dark/Light</h4>
+                    <input type="checkbox" class="CMcheckbox" id="CMcheckbox">
+                    <label id="CMcheckbox-label" for="CMcheckbox" class="CMcheckbox-label">
+                        <span id="CM-IconD" class="material-symbols-outlined DM">dark_mode</span>
+                        <span id="CM-IconL" class="material-symbols-outlined LM">light_mode</span>
+
+                        <span id="CMslider" class="CMslider"></span>
+                    </label>
+                </div>
+                
+                <a id="nav-logout" class="logoutNav" href="../index.html">Log Out</a>
+            </div>
+        </ul>
+       
+    </nav>
+
+    <div class="helpsection">
+        <div class="container">
+            <h1 id="mainTitle4" class="sub-title">Customer support</h1>
+            <div class="row">
+
+                <div id="help-col-1" class="help-col-1">
+                    <h1 id="mainTitle1" class="HelpmainTitle"><span class="material-symbols-outlined">outgoing_mail</span>Contact information</h1>
+                    <p class="generaltext" style="margin-top: 20px;">
+                        General inquiries: <br>
+                        support@valit.app
+                        <br>
+                        <br>
+                        Security inquiries: <br>
+                        security@valit.app
+                        <br>
+                        <br>
+                        For pressing matters call: <br>
+                        08213761236
+                        <br>
+                        <br>
+                        You can contact us 24/7, and we will make sure you get the help you need!
+                    </p>
+                </div>
+                <div id="help-col-2" class="help-col-2">
+                    <h1 id="mainTitle2" class="HelpmainTitle"><span class="material-symbols-outlined">bar_chart</span>Operational information</h1>
+                    <div class="maintenance">
+                        <div class="stat">
+                            <div class="operationalCM"></div>
+                            <h1 class="generaltext">Receipt service status: Operational</h1>
+                        </div>
+                        <div class="stat">
+                            <div class="operationalCM"></div>
+                            <h1 class="generaltext">Payment handling service: Operational</h1>
+                        </div>
+                        <div class="stat">
+                            <div class="maintenanceCM"></div>
+                            <h1 class="generaltext">Data analysis service: Operational, minor maintenance</h1>
+                        </div>
+                        <div class="stat">
+                            <div class="offline"></div>
+                            <h1 class="generaltext">Receipt design service: Offline, heavy maintenance</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="maintenanceSection" class="plannedMaintenance">
+                <h1 id="mainTitle3" class="HelpmainTitle"><span class="material-symbols-outlined">acute</span>Planned maintenance</h1>
+                <div class="ticket maintenanceCM">
+                    <h1>2023-03-21 — 08.00 to 10.00 </h1>
+                    <h2>Receipt design service</h2>
+                    <p>Minor updates to the service. It will be operaitonal, but might be slower than usual.</p>
+                </div>
+                <div class="ticket offline">
+                    <h1>2023-03-23 — 09.00 to 12.00 </h1>
+                    <h2>Main Receipt service</h2>
+                    <p>Major updates to the service. It will not be operaitonal.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+
+<script>
+        function CMsystemPreference(){
+            if(window.matchMedia("(prefers-color-scheme:dark)").matches)
+            {
+                document.getElementById("CMcheckbox").checked = false;
+                changeColorMode('DM');
+                localStorage.setItem('ColorMode', "DM")
+
+            } else {
+                document.getElementById("CMcheckbox").checked = true;
+                changeColorMode('LM');
+                localStorage.setItem('ColorMode', "LM")
+            }
+        }
+
+        if(localStorage.getItem("usrCred") == ""){
+            window.location.href = "../auth/signin.html"
+        } 
+    
+        if(localStorage.getItem("ColorMode") == "DM"){
+            document.getElementById("CMcheckbox").checked = false;
+            changeColorMode('DM');
+            } else if (localStorage.getItem("ColorMode") == "LM") {
+                document.getElementById("CMcheckbox").checked = true;
+                changeColorMode('LM');
+            } else {
+                CMsystemPreference();
+        }
+
+        var checkbox = document.getElementById("CMcheckbox");
+        checkbox.addEventListener('change', () => {
+            if(document.getElementById("CMcheckbox").checked == true){
+                changeColorMode('LM');
+                localStorage.setItem('ColorMode', "LM")
+            } else {
+                changeColorMode('DM');
+                localStorage.setItem('ColorMode', "DM")
+
+            }
+        })
+
+    
+        function changeColorMode(mode){
+        if (mode == "LM"){
+            document.body.style.background = "#edebef"
+            document.getElementById("Nav").style.background = "#FFF"
+            document.getElementById("LogotextID").style.color = "#121212" 
+            document.getElementById("CMtitle").style.color ="#000"
+            document.getElementById("nav-logout").style.backgroundColor ="#e41f1f8f"
+            document.getElementById("maintenanceSection").style.backgroundColor = "#fff"
+            document.getElementById("maintenanceSection").style.boxShadow = "10px 10px 15px rgba(0,0,0,0.05)"
+
+            document.getElementById("help-col-1").style.backgroundColor = "#fff"
+            document.getElementById("help-col-1").style.boxShadow = "10px 10px 15px rgba(0,0,0,0.05)"
+            document.getElementById("help-col-2").style.backgroundColor = "#fff"
+            document.getElementById("help-col-2").style.boxShadow = "10px 10px 15px rgba(0,0,0,0.05)"
+
+            document.getElementById("mainTitle1").style.color = "#000"
+            document.getElementById("mainTitle2").style.color = "#000"
+            document.getElementById("mainTitle3").style.color = "#000"
+            document.getElementById("mainTitle4").style.color = "#000"
+
+            var statuslist = document.querySelectorAll(".generaltext")
+            statuslist.forEach(item => {
+                item.style.color = "#000"
+            })
+
+            var operationalCM = document.querySelectorAll(".operationalCM")
+            operationalCM.forEach(item => {
+                item.style.backgroundColor = "rgba(75, 192, 192, 0.2)"
+            })
+            var maintenanceCM = document.querySelectorAll(".maintenanceCM")
+            maintenanceCM.forEach(item => {
+                item.style.backgroundColor = "rgba(255, 159, 64, 0.2)"
+            })
+
+            var offline = document.querySelectorAll(".offline")
+            offline.forEach(item => {
+                item.style.backgroundColor = "rgba(255, 99, 132, 0.2)"
+            })
+           
+            var navlist = document.getElementsByClassName("navLink")
+            for (item of navlist) {
+                item.style.color = "#070708"
+            }
+            
+
+        
+
+
+        } else if (mode == "DM") {
+            document.body.style.background = "#121212"
+            document.getElementById("Nav").style.background = "#212121"
+            document.getElementById("LogotextID").style.color = "#ccc"
+            document.getElementById("CMtitle").style.color ="#707070"
+            document.getElementById("nav-logout").style.backgroundColor ="#e41f1f"
+            document.getElementById("maintenanceSection").style.backgroundColor = "#212121"
+            document.getElementById("maintenanceSection").style.boxShadow = "10px 10px 15px rgba(255,255,255,0.02)"
+            
+            document.getElementById("help-col-1").style.backgroundColor = "#212121"
+            document.getElementById("help-col-1").style.boxShadow = "10px 10px 15px rgba(255,255,255,0.02)"
+            document.getElementById("help-col-2").style.backgroundColor = "#212121"
+            document.getElementById("help-col-2").style.boxShadow = "10px 10px 15px rgba(255,255,255,0.02)"
+
+            document.getElementById("mainTitle1").style.color = "#fff"
+            document.getElementById("mainTitle2").style.color = "#fff"
+            document.getElementById("mainTitle3").style.color = "#fff"
+            document.getElementById("mainTitle4").style.color = "#fff"
+
+            var statuslist = document.querySelectorAll(".generaltext")
+            statuslist.forEach(item => {
+                item.style.color = "#ccc"
+            })
+
+            var operationalCM = document.querySelectorAll(".operationalCM")
+            operationalCM.forEach(item => {
+                item.style.backgroundColor = "rgba(75, 192, 192, 1)"
+            })
+            var maintenanceCM = document.querySelectorAll(".maintenanceCM")
+            maintenanceCM.forEach(item => {
+                item.style.backgroundColor = "rgba(255, 159, 64, 1)"
+            })
+
+            var offline = document.querySelectorAll(".offline")
+            offline.forEach(item => {
+                item.style.backgroundColor = "rgba(255, 99, 132, 1)"
+            })
+
+
+            var navlist = document.getElementsByClassName("navLink")
+            for (item of navlist) {
+                item.style.color = "#ccc"
+            }
+            
+           
+        }
+    }
+        
+</script>
+</html>

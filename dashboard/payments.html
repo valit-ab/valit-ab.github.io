@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valit - Dashboard</title>
+    <link rel="stylesheet" href="dashstyles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="icon" sizes="32x32" type="image/png" href="../assets/Images/favicon.png" />
+</head>
+    <body>
+        <nav id="Nav">
+            <a  class="logolink" href="#">
+                <img src="../assets/Images/Valitnotext2.png" class="logo">
+                <h1  id="LogotextID" class="logo-text">Valit</h1>
+            </a>
+            <ul>
+                <div>
+                    <li><a class="navLink" href="./overview.html"><span class="material-symbols-outlined">home</span>Overview</a></li>
+                    <li><a class="navLink" href="./payments.html"><span class="material-symbols-outlined">paid</span>Payments</a></li>
+                    <li><a class="navLink" href="#partners"><span class="material-symbols-outlined">receipt</span>Receipt design</a></li>
+                    <li><a class="navLink" href="./account.html"><span class="material-symbols-outlined">person</span>Account</a></li>
+                    <li><a class="navLink" href="./help.html"><span class="material-symbols-outlined">help</span>Help</a></li>
+                    
+                </div>
+                <div class="settingsMenu">
+                    <div class="CMholder">
+                        <h4 id="CMtitle" >Dark/Light</h4>
+                        <input type="checkbox" class="CMcheckbox" id="CMcheckbox">
+                        <label id="CMcheckbox-label" for="CMcheckbox" class="CMcheckbox-label">
+                            <span id="CM-IconD" class="material-symbols-outlined DM">dark_mode</span>
+                            <span id="CM-IconL" class="material-symbols-outlined LM">light_mode</span>
+    
+                            <span id="CMslider" class="CMslider"></span>
+                        </label>
+                    </div>
+                    
+                    <a id="nav-logout" class="logoutNav" href="../index.html">Log Out</a>
+                </div>
+            </ul>
+           
+        </nav>
+
+
+        <div id="overviewMain">
+            <div class="container">
+                <div class="filter">
+                    <div>
+                    
+                        <div id="DDbox" class="dropDown">
+                            <div class="select">
+                                <span class="selected">All stores</span>
+                                <div class="caret"></div>
+                            </div>
+                            <ul class="menu">
+                                <li class="active">All stores</li>
+                                <li>Coffestore 22</li>
+                                <li>Coffestore 23</li>
+                                <li>Coffestore 24</li>
+                                <li>Coffestore 25</li>
+    
+                            </ul>
+                            
+                        </div>
+    
+                
+    
+    
+                    </div>
+
+                   
+
+                </div>
+                <div class="sortinglist">
+                    <ul>
+                        <li><a href="#" onclick="getPaymentInfo('RF')"><span class="material-symbols-outlined LM">schedule</span>Recent-first</a></li>
+                        <li><a href="#" onclick="getPaymentInfo('OF')" ><span class="material-symbols-outlined LM">calendar_month</span>Oldest-first</a></li>
+                        <li><a href="#" onclick="getPaymentInfo('AH')"><span class="material-symbols-outlined LM">arrow_upward</span>Amount (High first)</a></li>
+                        <li><a href="#" onclick="getPaymentInfo('AL')"><span class="material-symbols-outlined LM">arrow_downward</span>Amount (Low first)</a></li>
+
+                    </ul>
+                </div>
+
+
+                <div id="paymentSection" class="payments">
+
+
+                    
+    
+                
+    
+                </div>
+
+            </div>              
+        </div>
+    </body>
+
+    <script>
+
+        var paymentItemList = []
+
+        function getPaymentInfo(sorting) {
+            paymentItemList.forEach(item => {
+                document.getElementById(item.id).remove()
+                var TDlist = document.querySelectorAll(".timeDivider")
+                TDlist.forEach(item => {
+                    item.remove()
+                })
+            })
+            paymentItemList.length = 0
+
+            var payments = [
+                {
+                    "storeName":"John's Electronics 1", 
+                    "invoiceAmount":32,
+                    "year": 2023,
+                    "month": "07",
+                    "day": "21",
+                    "receiptNo":12345679, 
+                    "paid":false
+                },
+                {
+                    "storeName":"John's Electronics 2",
+                    "invoiceAmount":60,
+                    "year": 2022,
+                    "month": "08",
+                    "day": "09",
+                    "receiptNo":12345678,
+                    "paid":true
+                },
+                {
+                    "storeName":"John's Electronics 3",
+                    "invoiceAmount":66,
+                    "year": 2023,
+                    "month": "11",
+                    "day": "11",
+                    "receiptNo":12345678,
+                    "paid":true
+                },
+                {
+                    "storeName":"John's Electronics 3",
+                    "invoiceAmount":600,
+                    "year": 2024,
+                    "month": "09",
+                    "day": "19",
+                    "receiptNo":12345678,
+                    "paid":true
+                }
+    
+            ]
+           
+            payments.forEach(item => {
+
+            
+                var date = item.year+"-"+item.month+"-"+item.day;
+                var storeName = item.storeName;
+
+                var amountText = document.createElement("p")
+                amountText.innerText = item.invoiceAmount + " SEK"
+
+                var storeName_and_date = document.createElement("h4")
+                storeName_and_date.innerText = date + " | " + storeName;
+
+
+
+                var receiptNumberText = document.createElement("h4")
+                receiptNumberText.className ="receiptNo"
+                receiptNumberText.innerText = "Receipt no. " + item.receiptNo
+
+
+                var invoiceStatus = document.createElement("h4")
+                if(item.paid){
+                    invoiceStatus.className = "paid"
+                    invoiceStatus.innerText = "Paid"
+                } else if (item.paid == false) {
+                    invoiceStatus.className ="notpaid"
+                    invoiceStatus.innerText = "Pending"
+                }
+
+                var invoiceAnchor = document.createElement("a")
+                invoiceAnchor.href ="#"
+
+                var invoiceDiv = document.createElement("div")
+                invoiceDiv.className = "payment"
+
+                var mainInfoDiv = document.createElement("div")
+                mainInfoDiv.className = "maininfodiv"
+                mainInfoDiv.appendChild(storeName_and_date)
+                mainInfoDiv.appendChild(amountText)
+
+    
+
+                invoiceDiv.appendChild(mainInfoDiv)
+                invoiceDiv.appendChild(receiptNumberText)
+                invoiceDiv.appendChild(invoiceStatus)
+                invoiceAnchor.appendChild(invoiceDiv)
+                invoiceAnchor.id = item.year + "-" + item.month + "-" + item.day + "-" + item.receiptNo + item.invoiceAmount
+
+                paymentItemList.push(invoiceAnchor)
+                
+            })
+
+            function compareNumbers(a, b) {
+                if(a.id.split("-")[0] - b.id.split("-")[0] == 0) {
+                    if(a.id.split("-")[1] - b.id.split("-")[1] == 0) {
+                        return a.id.split("-")[2] - b.id.split("-")[2]
+                    } else {
+                       
+                        return a.id.split("-")[1] - b.id.split("-")[1]
+                        
+                    }
+                } else {
+                    return a.id.split("-")[0] - b.id.split("-")[0]
+                }
+
+
+            }
+
+
+            function compareAmounts(a, b) {
+                
+                return a.id.split("-")[4] - b.id.split("-")[4]
+                
+            }
+
+        
+        
+
+            if(sorting == "RF"){
+                var oldcheck = [];
+
+                
+                paymentItemList.sort(compareNumbers).reverse()
+                paymentItemList.forEach(item => {
+                    var timediv = document.createElement("div")
+                    timediv.className = "timeDivider"
+
+                    var separator1 = document.createElement("div")
+                    separator1.className = "separatorTD"
+
+                    var TDinfo = document.createElement("h4")
+
+                    var separator2 = document.createElement("div")
+                    separator2.className = "separatorTD"
+
+                    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+                    TDinfo.innerText =  months[parseInt(item.id.split("-")[1]) - 1] +", " + item.id.split("-")[0]
+
+                    timediv.appendChild(separator1)
+                    timediv.appendChild(TDinfo)
+                    timediv.appendChild(separator2)
+
+
+
+                    if((item.id.split("-")[0] < oldcheck[0])){
+                        document.getElementById("paymentSection").appendChild(timediv)
+                    }
+                    if((item.id.split("-")[1] < oldcheck[1])) {
+                        document.getElementById("paymentSection").appendChild(timediv)
+                    }
+                    
+                    document.getElementById("paymentSection").appendChild(item)
+                    oldcheck = item.id.split("-")
+
+                })
+            } else if (sorting == "OF") {
+
+                var oldcheck = [];
+
+                paymentItemList.sort(compareNumbers)
+                paymentItemList.forEach(item => {
+
+                    var timediv = document.createElement("div")
+                    timediv.className = "timeDivider"
+
+                    var separator1 = document.createElement("div")
+                    separator1.className = "separatorTD"
+
+                    var TDinfo = document.createElement("h4")
+
+                    var separator2 = document.createElement("div")
+                    separator2.className = "separatorTD"
+
+                    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+                    TDinfo.innerText =  months[parseInt(item.id.split("-")[1]) - 1] +", " + item.id.split("-")[0]
+
+                    timediv.appendChild(separator1)
+                    timediv.appendChild(TDinfo)
+                    timediv.appendChild(separator2)
+
+
+
+                    if((item.id.split("-")[0] > oldcheck[0])){
+                        document.getElementById("paymentSection").appendChild(timediv)
+                    }
+                    if((item.id.split("-")[1] > oldcheck[1])) {
+                        document.getElementById("paymentSection").appendChild(timediv)
+                    }
+                    
+                    document.getElementById("paymentSection").appendChild(item)
+                    oldcheck = item.id.split("-")
+
+
+                })
+            } else if (sorting == "AH") {
+                paymentItemList.sort(compareAmounts).reverse()
+                paymentItemList.forEach(item => { 
+                    document.getElementById("paymentSection").appendChild(item)
+                })
+            } else if (sorting == "AL") {
+                paymentItemList.sort(compareAmounts)
+                paymentItemList.forEach(item => { 
+                    document.getElementById("paymentSection").appendChild(item)
+                })
+            }
+
+            changeColorMode(localStorage.getItem("ColorMode"))            
+
+        }
+
+
+        getPaymentInfo("RF")
+
+
+        function dropDownCM(mode) {
+            const dropDownList = document.querySelectorAll(".dropDown");
+            dropDownList.forEach(dropdown => {
+                const select = dropdown.querySelector(".select");
+                const caret = dropdown.querySelector(".caret");
+                const menu = dropdown.querySelector(".menu");
+                const options = dropdown.querySelectorAll(".menu li")
+                const selected = dropdown.querySelector(".selected");
+
+                if(mode == "LM") {
+                    selected.style.color = "#212121";
+                    selected.style.fontWeight = "700";
+                    caret.style.borderTop ="11px solid #212121";
+                    menu.classList.remove("menuDM");
+                    menu.classList.add("menuLM");
+
+
+
+                } else {
+                    selected.style.color = "#fff";
+                    selected.style.fontWeight = "700";
+                    caret.style.borderTop ="11px solid #fff";
+                
+                    menu.classList.remove("menuLM");
+                    menu.classList.add("menuDM");
+
+                }
+                
+
+            })
+        }
+
+        dropDownCM("LM")
+
+        const dropDownList = document.querySelectorAll(".dropDown");
+        dropDownList.forEach(dropdown => {
+            const select = dropdown.querySelector(".select");
+            const caret = dropdown.querySelector(".caret");
+            const menu = dropdown.querySelector(".menu");
+            const options = dropdown.querySelectorAll(".menu li")
+            const selected = dropdown.querySelector(".selected");
+
+            select.addEventListener("click", () =>{
+                select.classList.toggle("select-clicked");
+                caret.classList.toggle("caret-rotate");
+                menu.classList.toggle("menu-open");
+            })
+            
+            window.addEventListener('click', function(e){   
+                if (document.getElementById('DDbox').contains(e.target)){
+                    // Clicked in box
+                } else{
+                    select.classList.remove("select-clicked");
+                    caret.classList.remove("caret-rotate");
+                    menu.classList.remove("menu-open");
+                }
+            });
+
+            options.forEach(option => {
+                option.addEventListener("click", () =>{
+                    selected.innerText = option.innerText;
+                    select.classList.remove("select-clicked");
+                    caret.classList.remove("caret-rotate");
+                    menu.classList.remove("menu-open");
+                    options.forEach(option => {
+                        option.classList.remove("active");
+                
+                    })
+                    option.classList.add("active");
+                    
+                })
+            })
+
+        })
+
+
+
+        function CMsystemPreference(){
+            if(window.matchMedia("(prefers-color-scheme:dark)").matches)
+            {
+                document.getElementById("CMcheckbox").checked = false;
+                changeColorMode('DM');
+                localStorage.setItem('ColorMode', "DM")
+
+            } else {
+                document.getElementById("CMcheckbox").checked = true;
+                changeColorMode('LM');
+                localStorage.setItem('ColorMode', "LM")
+            }
+        }
+
+    
+        if(localStorage.getItem("ColorMode") == "DM"){
+            document.getElementById("CMcheckbox").checked = false;
+            changeColorMode('DM');
+
+        } else if (localStorage.getItem("ColorMode") == "LM") {
+            document.getElementById("CMcheckbox").checked = true;
+            changeColorMode('LM');
+        } else {
+            CMsystemPreference();
+        }
+
+        var checkbox = document.getElementById("CMcheckbox");
+        checkbox.addEventListener('change', () => {
+            if(document.getElementById("CMcheckbox").checked == true){
+                changeColorMode('LM');
+                localStorage.setItem('ColorMode', "LM")
+            } else {
+                changeColorMode('DM');
+                localStorage.setItem('ColorMode', "DM")
+
+            }
+        })
+
+        if(localStorage.getItem("usrCred") == ""){
+            window.location.href = "../auth/signin.html"
+        } 
+
+        function changeColorMode(mode){
+        if (mode == "LM"){
+            document.body.style.background = "#edebef"
+            document.getElementById("Nav").style.background = "#FFF"
+            document.getElementById("LogotextID").style.color = "#121212" 
+            document.getElementById("CMtitle").style.color ="#000"
+            document.getElementById("nav-logout").style.backgroundColor ="#e41f1f8f"
+
+
+
+            dropDownCM("LM")
+
+            var paymentCMList = document.querySelectorAll(".payment")
+            paymentCMList.forEach(item => {
+                item.style.backgroundColor = "#fff"
+                item.style.boxShadow = "10px 10px 15px rgba(0,0,0,0.05)"
+                item.style.color = "#000"
+            }) 
+
+            var separatorList = document.querySelectorAll(".separatorTD")
+            separatorList.forEach(item => {
+                item.style.backgroundColor = "#ccc"
+            })
+    
+
+            var navlist = document.getElementsByClassName("navLink")
+            for (item of navlist) {
+                item.style.color = "#070708"
+            }
+            
+
+
+        
+
+
+        } else if (mode == "DM") {
+            document.body.style.background = "#121212"
+            document.getElementById("Nav").style.background = "#212121"
+            document.getElementById("LogotextID").style.color = "#ccc"
+            document.getElementById("CMtitle").style.color ="#707070"
+            document.getElementById("nav-logout").style.backgroundColor ="#e41f1f"
+
+            dropDownCM("DM")
+
+
+            var paymentCMList = document.querySelectorAll(".payment")
+            paymentCMList.forEach(item => {
+                item.style.backgroundColor = "#212121"
+                item.style.boxShadow = "10px 10px 15px rgba(255,255,255,0.02)"
+                item.style.color = "#ccc"
+            }) 
+
+            var separatorList = document.querySelectorAll(".separatorTD")
+            separatorList.forEach(item => {
+                item.style.backgroundColor = "#707070"
+            })
+
+            var navlist = document.getElementsByClassName("navLink")
+            for (item of navlist) {
+                item.style.color = "#ccc"
+            }
+            
+
+           
+        }
+    }
+
+
+    </script>
+</html>
