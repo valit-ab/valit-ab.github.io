@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valit - Dashboard</title>
+    <link rel="stylesheet" href="designer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="icon" sizes="32x32" type="image/png" href="../assets/Images/favicon.png" />
+</head>
+<body>
+    <nav id="Nav">
+        <a  class="logolink" href="#">
+            <img src="../assets/Images/Valitnotext2.png" class="logo">
+            <h1  id="LogotextID" class="logo-text">Valit</h1>
+        </a>
+        <ul>
+            <div>
+                <li><a class="navLink" href="./overview.html"><span class="material-symbols-outlined">home</span>Overview</a></li>
+                <li><a class="navLink" href="./payments.html"><span class="material-symbols-outlined">paid</span>Payments</a></li>
+                <li><a class="navLink" href="#partners"><span class="material-symbols-outlined">receipt</span>Receipt design</a></li>
+                <li><a class="navLink" href="./account.html"><span class="material-symbols-outlined">person</span>Account</a></li>
+                <li><a class="navLink" href="./help.html"><span class="material-symbols-outlined">help</span>Help</a></li>
+                
+            </div>
+            <div class="settingsMenu">
+                <div class="CMholder">
+                    <h4 id="CMtitle" >Dark/Light</h4>
+                    <input type="checkbox" class="CMcheckbox" id="CMcheckbox">
+                    <label id="CMcheckbox-label" for="CMcheckbox" class="CMcheckbox-label">
+                        <span id="CM-IconD" class="material-symbols-outlined DM">dark_mode</span>
+                        <span id="CM-IconL" class="material-symbols-outlined LM">light_mode</span>
+
+                        <span id="CMslider" class="CMslider"></span>
+                    </label>
+                </div>
+                
+                <a id="nav-logout" class="logoutNav" href="../index.html">Log Out</a>
+            </div>
+        </ul>
+       
+    </nav>
+    <div class="toolbar">
+        <ul>
+            <li><a href="#">Add Image</a></li>
+            <li><a href="#">Add Text</a></li>
+            <li><a href="#">Add Line</a></li>
+            <li><a href="#">Change Font</a></li>
+            <li><a href="#">Change Font size</a></li>
+            <li><a href="#">Manage Background</a></li>
+
+        </ul>
+    </div>
+
+    <div class="container">
+        <div id="editor" class="editor">
+            <h4 class="infoText">Editor</h4>
+            <img id="logo2" class="logo2" src="../assets/Images/Valitnotext2.png">
+            <h4>Coffestore 32</h4>
+            <h5>Tel: 0872635462</h5>
+            <h5>Org.nr: 3476523-3242</h5>
+            <div class="line"></div>
+        </div>
+
+
+        <div id="preview" class="preview">
+            <h4 class="infoText">Preview</h4>
+        </div>
+    </div>  
+    
+
+</body>
+<script>
+    var element = document.getElementById("logo2")
+    var rect = element.getBoundingClientRect();
+
+    var element2 = document.getElementById("editor")
+    var rect2 = element2.getBoundingClientRect();
+
+    dragElement(document.getElementById("logo2"));
+
+    function dragElement(elmnt) {
+        var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+            // if present, the header is where you move the DIV from:
+            document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+        } else {
+            // otherwise, move the DIV from anywhere inside the DIV:
+            elmnt.onmousedown = dragMouseDown;
+        }
+
+        function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // get the mouse cursor position at startup:
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            // call a function whenever the cursor moves:
+            document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // calculate the new cursor position:
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            // set the element's new position:
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            console.log(elmnt.offsetLeft - rect2.left, rect.top - rect2.top)
+
+
+        }
+
+        function closeDragElement() {
+            // stop moving when mouse button is released:
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+    }
+
+</script>
+</html>
