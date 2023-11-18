@@ -406,7 +406,7 @@ nav ul li a:hover::after{
     border-radius: 0.5em;
     color: #9fa5b5;
     position: absolute;
-
+    
     top: 4em;
     left: 50%;
     width: 100%;

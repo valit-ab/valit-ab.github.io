@@ -28,8 +28,9 @@ body{
 
 
 .container{
-    padding: 20px 10%;
+    padding: 40px 10%;
     z-index: 2;
+    background-color: #06231900;
 
 }
 
@@ -127,7 +128,7 @@ nav ul li a:hover::after{
 
 
 .headertexts{
-    background: #00000070;
+    background: #00000000;
     width: 80%;
     padding: 40px;
     border-radius: 30px;
@@ -229,7 +230,7 @@ nav ul li a:hover::after{
     font-size: 30px;
     font-weight: 700;
     color: #070708;
-    margin-top: 6%;
+    margin-top: 4%;
 }
 
 .tab-titles{
@@ -455,7 +456,7 @@ nav ul li a:hover::after{
 
 /*Pricing*/
 #pricing{
-    padding: 50px 0;
+    padding: 60px 0;
 }
 
 .wrapper{
@@ -465,6 +466,7 @@ nav ul li a:hover::after{
     border-radius: 16px;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
     margin-top: 20px;
+    min-width: 400px;
 }
 
 .wrapper header {
@@ -519,7 +521,7 @@ header .slider{
 #tab-1:checked ~ header .slider{
     left: 0%;
     width: 90px;
-    transform: translateX(5%);
+    transform: translateX(6%);
 
 }
 #tab-2:checked ~ header .slider{
@@ -683,6 +685,201 @@ header .slider{
     margin-top: 20px;
     
 }
+
+
+
+
+/*SLIDER*/
+
+
+.price-comparison{
+    width: 73%;
+    background-color: rgba(255, 99, 71, 0);
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.rangeslider2{
+    height: fit-content;
+    width: 80%;
+    background-color: #ffffff00;
+    border-radius: 10px;
+    /*box-shadow: 0 6px 16px hsla(256, 76%, 24%, 0.15);*/
+    padding-inline: 2.5rem;
+    display: grid;
+    margin-top: 80px;
+}
+
+
+.slider2_components{
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-top: 50px;
+    
+}
+
+.slider2{
+    width: 100%;
+    height: 16px;
+    background-color: #eeeeee86;
+    border-radius: 4rem;
+    box-shadow: 0 4px 12px hsla(256, 76%, 24%, 0.2);
+    overflow: hidden;
+}
+
+.slider2-line{
+    width: 100%;
+    height: 100%;
+    background-color: #1db99a;
+}
+
+.slider2Indicator{
+    width: 32px;
+    height: 32px;
+    background-color: #edebef;
+    border-radius: 50%;
+    box-shadow: 0 0 12px hsla(256, 76%, 24%, 0.2);
+    position: absolute;
+}
+ 
+.slider2_value{
+    width: 64px;
+    height: 64px;
+    background: #1db99a;
+    position: absolute;
+    top: -83px;
+    left: -16px;
+    border-radius: 2rem 2rem 2rem 0.25rem;
+    transform: rotate(-45deg);
+    display: grid;
+    place-items: center;
+
+}
+
+.slider2_value-number{
+    transform: rotate(45deg);
+    color: #fff;
+    font-size: 20px;
+}
+
+/*    opacity: 0;
+*/
+.slider_input{
+    appearance: none;
+    width: 100%;
+    height: 16px;
+    position: absolute;
+    bottom: 0;
+    -webkit-appearance: none;
+    background-color: rgba(255, 0, 0, 0);
+    opacity: 0;
+    
+}
+
+.slider_input::-webkit-slider-thumb{
+    appearance: none;
+    width: 32px;
+    height: 32px;
+    background-color: #1db99a00;
+}
+.slider_input::-moz-range-thumb{
+    appearance: none;
+    width: 32px;
+    height: 32px;
+    background-color: #1db99a00;
+}
+
+.slider_input::-webkit-slider-thumb:hover{
+    cursor: pointer;
+
+}
+.slider_input::-moz-range-thumb:hover{
+    cursor: pointer;
+
+}
+
+.ESTprice{
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    align-self: center;
+    justify-self: center;
+}
+
+.ESTprice span{
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    align-self: center;
+    justify-self: center;
+    color: #000000af;
+}
+
+
+.PricingMainTitle{
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    align-self: center;
+    justify-self: center;
+    margin-top: 20px;
+}
+
+#pricing{
+    background-color: rgba(130, 129, 205, 0);
+}
+
+
+.rangeslider2 p{
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    align-self: center;
+    justify-self: center;
+    color: #000000af;
+}
+
+
+
+
+.pricingMotivation{
+    background-color: #1db99a00;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.pricingMotivation div{
+    width: 22%;
+    height: 380px;
+    border-radius: 10px;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    box-shadow: 0 0 12px hsla(141, 54%, 25%, 0.2);
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
