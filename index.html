@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valit</title>
+    <title>Valit | Modern Digital Receipts</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
     <link rel="icon" sizes="32x32" type="image/png" href="./assets/Images/favicon.png" />
@@ -140,20 +140,100 @@
 
         </div>
 
+
+
+
+        <!--Solution-->
+        <div id="solution">
+            <div class="container">
+                <h1 class="sub-title">Digital Receipts</h1>
+                <div class="Solcol1">
+
+                    <div id="SolC1" class="solutionCard1">
+                        <span class="material-symbols-outlined">acute</span>
+                        <h1>Fast and Simple</h1>
+                        <p>
+                            You no longer have to load new paper rolls to your printer!
+                        </p>
+                    </div>
+
+                    <div id="SolC2" class="solutionCard2">
+                        <span class="material-symbols-outlined">nature</span>
+                        <h1>Sustainable and Clean</h1>
+                        <p>
+                            With digital receipts you no longer have to print hundreds of paper receipts.
+                        </p>
+                    </div>
+
+                    <div id="SolC3" class="solutionCard3">
+                        <span class="material-symbols-outlined">receipt_long</span>
+                        <h1>Modern and Innovative</h1>
+                        <p>Provide your customers with a modern service that they will remember!</p>
+                    </div>
+                </div>
+                
+                <div class="Solcol2">
+                    <div id="SolC4" class="solutionCard4">
+                        <span class="material-symbols-outlined">paid</span>
+                        <h1>Reduce Costs</h1>
+                        <p>Since digital receipts are often cheaper than paper receipts, you can save a lot of money.</p>
+                    </div>
+                    <div id="SolC5" class="solutionCard5">
+                        <span class="material-symbols-outlined">bar_chart</span>
+                        <h1>Increase Website Traffic</h1>
+                        <p>Digital receipts include links to your products on your website!</p>
+                    </div>
+                    <div id="SolC6" class="solutionCard6">
+                        <span class="material-symbols-outlined">analytics</span>
+                        <h1>Get Business Data</h1>
+                        <p>We can analyse purchase patters and help you grow your business.</p>
+                    </div>
+                </div>
+                <div style="width: 100%; display: flex; justify-content:space-around; margin-top: 50px;">
+                    <div class="productSection">
+                        <h1>Modern Digital Receipts</h1>
+                        <p>
+                            Our digital receipts are tailored to your store and brand. 
+                            <br>
+                            Make the purchase process quicker and more seamless with digital receipts.
+                            <br> 
+                            With Valit, your customers receive their receipts immeadiately after purchase.
+                            <br> 
+                            The cashier won't have to do anything extra. It's completely automatic!
+                            <br> 
+                            <br> 
+                            — Custom receipt design 
+                            <br> 
+                            <br> 
+                            — Links to your website
+                            <br> 
+                            <br>
+                            — No changes to your cash-register
+
+                        </p>
+                    </div>
+                    <img class="imageReceipt" src="./assets/Images/ReceiptPreview.png" alt="">
+                </div>        
+            </div>
+        </div>
+
+        </div>
+
+        
 <!--Integration-->
         <div id="integration">
             <div class="container">
-                <h1 class="sub-title">How does it work?</h1>
+                <h1 class="sub-title">How Does It Work?</h1>
                 <div class="processlist">
 
                     <div>
                         <span class="material-symbols-outlined">subject</span>
                         <h2>Register</h2>
-                        <p>The first step is registering your business and sharing details about your specific needs. Begin by selecting a pricing plan that best fits your business requirements.</p>
+                        <p>Begin by selecting a pricing plan that best fits your business requirements.</p>
                     </div>
                     <div>
                         <span class="material-symbols-outlined">schedule</span>
-                        <h2>Meeting</h2>
+                        <h2>Wait</h2>
                         <p>We will provide updates and a clear timeline for when Valit is ready! This is because we have to connect with your cash-register provider.</p>
                     </div>
                     <div>
@@ -167,18 +247,18 @@
             </div>
         </div>
 
-
+       
 
 <!----Pricing----->
         <div id="pricing">
             <div class="container">
                 <h1 class="sub-title">Pricing</h1>
                 <div class="row">
-                    <div class="wrapper">
+                    <div class="wrapper" id="PricingWrapper">
                         <input type="radio" name="slider" id="tab-1">
                         <input type="radio" name="slider" id="tab-2" checked>
                         <input type="radio" name="slider" id="tab-3">
-                        <header>
+                        <header id="headerPricing">
                             <label for="tab-1" class="tab-1">Base</label>
                             <label for="tab-2" class="tab-2">Standard</label>
                             <label for="tab-3" class="tab-3">Enterprise</label>
@@ -187,7 +267,7 @@
                             </div>
                         </header>
                         <div class="cards-area">
-                            <div class="cards">
+                            <div class="cards" id="cardsAreaPricing">
 
 
 
@@ -242,10 +322,35 @@
                                 </div>
 
                             </div>
+
+                            <div id="RegistrationForm" class="RegistrationForm">
+                            
+                                <h2 id="FormPlanText">Plan: Standard — 0,15 SEK /Receipt</h2>
+                                <h5>
+                                    This is only an application of interest, and is not binding!
+                                    <br>
+                                    You can choose if you would like to continue after our initial meeting.
+                                </h5>
+                                <div class="formholder">
+                                    <input class="RegFormTextInput" type="text" placeholder="Company name">                                
+                                    <input class="RegFormTextInput" type="text" placeholder="Email">
+                                </div>
+                                
+                                <input class="RegFormTextInput" type="text" placeholder="City">
+                                <textarea placeholder="Do you have any questions for us?" class="RegFormTextInput2"></textarea>
+                        
+                                
+
+                            </div>
+
                         </div>
-                        <button>Continue</button>
+                        <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                            <button id="SendFormBtn">Send</button>
+                            <button id="pricingContinueBtn">Continue</button>
+                        </div>
+                        
                     </div>
-                    <div class="price-comparison">
+                    <div class="price-comparison" id="price-comp">
                         <h1 class="PricingMainTitle">Estimate Your Monthly Costs</h1>
                         <h1 class="PricingMainTitle" style="color: #000000af; font-size: 20px;">Enter estimated amount of customers to your store per month</h1>
                         <div class="rangeslider2">
@@ -284,6 +389,7 @@
                 </div>
                 
                 
+                
             </div>
 
         </div>
@@ -291,7 +397,7 @@
 <!---Partners--->
         <div id="partners">
             <div class="container">
-                <h1 class="sub-title">Our Partners</h1>
+                <h1 class="sub-title">Our Network</h1>
                 <div class="partner-list">
                     <div class="partner">
                         <img src="assets/Images/Valitnotext2.png">
@@ -492,7 +598,7 @@
                         <h1 class="sub-title-small">Follow Us</h1>
                         <p>We regularly post updates and information regarding Valit.</p>
                         <ul>
-                            <li><a href="#">Linkedin</a></li>
+                            <li><a target="_blank" href="https://www.linkedin.com/company/valit-ab/">Linkedin</a></li>
                             <li><a href="#">Instagram</a></li>
                             <li><a href="#">Facebook</a></li>
                         </ul>
@@ -536,6 +642,13 @@
         var sliderLine = document.getElementById("range-line");
         var sliderInput = document.getElementById("range-input");
 
+
+
+
+
+
+       
+
         const sliderPricing = () => {
             sliderNumber.textContent = sliderInput.value
 
@@ -564,6 +677,71 @@
         sliderPricing();
         
 
+
+
+        
+        var registrationBtn = document.getElementById("pricingContinueBtn");
+        var FormSendBtn = document.getElementById("SendFormBtn");
+        var wrapper = document.getElementById("PricingWrapper");
+        var pricingComparison = document.getElementById("price-comp");
+        var form = document.getElementById("RegistrationForm");
+        var header = document.getElementById("headerPricing");
+        var cardArea = document.getElementById("cardsAreaPricing")
+
+        var formtext = document.getElementById("FormPlanText");
+
+        FormSendBtn.style.display = "none";
+        const get_form = () => {
+            if(registrationBtn.textContent == "Continue"){
+
+
+                registrationBtn.textContent = "Back";
+                registrationBtn.style.width = "600px";
+                FormSendBtn.style.width = "600px";
+
+
+                FormSendBtn.style.display = "flex";
+                registrationBtn.style.background = "#000"
+                wrapper.classList = "wrapper wrapper-form";
+
+
+                pricingComparison.style.display = "None";
+                header.style.display = "none";
+                cardArea.style.display = "none";
+
+                if(base.checked){
+                    formtext.innerText = "Plan: Base — 0,1 SEK /Receipt";
+                } else if (standard.checked){
+                    formtext.innerText = "Plan: Standard — 0,15 SEK /Receipt";
+                } else {
+                    formtext.innerText = "Plan: Enterprise — Custom prices for all your stores";
+                }
+                form.style.display = "flex";
+
+              
+            } else {
+
+
+                registrationBtn.textContent = "Continue";
+                wrapper.classList = "wrapper";
+                registrationBtn.style.width = "100%";
+                FormSendBtn.style.display = "none";
+                registrationBtn.style.background = "#1db99a"
+                setTimeout(function() {
+                    pricingComparison.style.display = "flex";
+                    sliderPricing();
+                    header.style.display = "flex";
+                    form.style.display = "none";
+                    cardArea.style.display = "flex";
+                }, 400)
+
+
+
+
+
+            }
+        }
+        registrationBtn.addEventListener("click", get_form);
 
 
         function opentab(tabname, section){
@@ -615,13 +793,44 @@
             document.getElementById(to).classList.add("focus")
         }
 
+
         /*Navbar sticky effect*/
         document.addEventListener('scroll', () => {
+            let solutionposition = document.getElementById("solution").getBoundingClientRect().top; 
+            
+            const SolC1 = document.getElementById("SolC1");
+            const SolC2 = document.getElementById("SolC2");
+            const SolC3 = document.getElementById("SolC3");
+            const SolC4 = document.getElementById("SolC4");
+            const SolC5 = document.getElementById("SolC5");
+            const SolC6 = document.getElementById("SolC6");
+
+            
             const nav = document.querySelector('nav');
-            if (window.scrollY > 0) {
+            const hero_background = document.getElementById("header")
+            console.log(solutionposition);
+            if (solutionposition <= 850) {
                 nav.classList.add('scrolled');
+                SolC1.classList.add("fadeIn")
+                SolC2.classList.add("fadeIn")
+                SolC3.classList.add("fadeIn")
+
             } else {
                 nav.classList.remove('scrolled');
+                SolC1.classList.remove("fadeIn");
+                SolC2.classList.remove("fadeIn");
+                SolC3.classList.remove("fadeIn");
+
+            }
+
+            if (solutionposition <= 500) {
+                SolC4.classList.add("fadeIn")
+                SolC5.classList.add("fadeIn")
+                SolC6.classList.add("fadeIn")
+            } else {
+                SolC4.classList.remove("fadeIn");
+                SolC5.classList.remove("fadeIn");
+                SolC6.classList.remove("fadeIn");
 
             }
         } )

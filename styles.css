@@ -17,9 +17,21 @@ body{
     color: #070708;
 }
 
-#header{
-    background: #edebef00;
+
+
+#headervideo {
+    z-index: -1;
+    width: 100%;
 }
+
+#header{
+    background: #ebefed00;
+    position: relative;
+    transition: background 0.5s ease-in-out;
+    box-shadow: none;
+
+}
+
 
 #headervideo {
     z-index: -1;
@@ -50,7 +62,7 @@ nav{
 
 nav.scrolled {
     background-color: #fff;
-    opacity: 0.9;
+    opacity: 1;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
 }
 
@@ -134,7 +146,7 @@ nav ul li a:hover::after{
     border-radius: 30px;
     position: absolute;
     left: 10%;
-    top: 30%;
+    top: 27%;
 
 }
 
@@ -142,7 +154,7 @@ nav ul li a:hover::after{
     display: flex;
     flex-wrap: wrap;
     font-size: 30px; 
-    color: #edebef;
+    color: #ffffff;
     justify-content: center;
 }
 
@@ -328,6 +340,203 @@ nav ul li a:hover::after{
 
 
 
+.solutionCard1{
+    width: 25%;
+    padding: 100px;
+    background: #ffffff;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.solutionCard2{
+    width: 25%;
+    padding: 80px;
+    background: #ffffff;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.solutionCard3{
+    width: 25%;
+    padding: 100px;
+    background: #ffffff;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 10px;    
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.solutionCard4{
+    width: 25%;
+    padding: 100px;
+    background: #ffffff;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.solutionCard5{
+    width: 25%;
+    padding: 100px;
+    background: #ffffff;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+
+.solutionCard6{
+    width: 25%;
+    padding: 100px;
+    background: #ffffff;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+
+
+
+.Solcol1{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.Solcol1 span{
+    font-size: 55px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.Solcol1 h1{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.Solcol1 p{
+    font-size: 12px;
+}
+
+
+.fadeIn{
+    opacity: 1;
+}
+
+.Solcol1 div:hover{
+    background: #1db99a;
+    transform: translateY(-10px);
+}
+
+
+
+
+
+
+.Solcol2{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 25px;
+}
+
+.Solcol2 span{
+    font-size: 55px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.Solcol2 h1{
+    font-size: 15px;
+    margin-bottom: 10px;
+
+}
+
+.Solcol2 p{
+    font-size: 12px;
+}
+
+.Solcol2 div:hover{
+    background: #2d66e2a2;
+    transform: translateY(-10px);
+}
+
+
+.imageReceipt{
+    /* Full height */
+  width: 60%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+  border-radius: 20px;
+
+}
+
+.productSection p{
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
 /*Integration*/
 
 #integration{
@@ -351,6 +560,7 @@ nav ul li a:hover::after{
     font-weight: 500;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
+    
 }
 
 .processlist div span{
@@ -466,7 +676,13 @@ nav ul li a:hover::after{
     border-radius: 16px;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
     margin-top: 20px;
-    min-width: 400px;
+    max-width: 27%;
+    transition: all 0.5s ease;
+}
+
+.wrapper-form{
+    width: 100%;
+    max-width: 100%;
 }
 
 .wrapper header {
@@ -670,6 +886,8 @@ header .slider{
     margin-top: 25px;
     cursor: pointer;
     transition: all 0.5s ease;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -873,17 +1091,38 @@ header .slider{
 
 
 
+.RegistrationForm{
+    display: none;
+    flex-direction: column;
+}
+
+.RegFormTextInput{
+    width: 290px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: solid 1px #ccc;
+}
+
+.formholder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 600px;
+}
 
 
-
-
-
-
-
-
-
-
-
+.RegFormTextInput2{
+    width: 600px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: solid 1px #ccc;
+    resize: vertical;
+    max-height: 450px;
+    min-height: 100px;
+}
 
 
 /*Footer*/
