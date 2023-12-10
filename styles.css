@@ -342,7 +342,6 @@ nav ul li a:hover::after{
 
 .solutionCard1{
     width: 25%;
-    padding: 100px;
     background: #ffffff;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
     margin-bottom: 25px;
@@ -354,12 +353,14 @@ nav ul li a:hover::after{
     transition: all 0.5s ease-in;
     flex-direction: column;
     text-align: center;
-
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .solutionCard2{
     width: 25%;
-    padding: 80px;
     background: #ffffff;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
     margin-bottom: 25px;
@@ -371,12 +372,14 @@ nav ul li a:hover::after{
     transition: all 0.5s ease-in;
     flex-direction: column;
     text-align: center;
-
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .solutionCard3{
     width: 25%;
-    padding: 100px;
     background: #ffffff;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
     margin-bottom: 25px;
@@ -388,12 +391,14 @@ nav ul li a:hover::after{
     transition: all 0.5s ease-in;
     flex-direction: column;
     text-align: center;
-
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .solutionCard4{
     width: 25%;
-    padding: 100px;
     background: #ffffff;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
     margin-bottom: 25px;
@@ -405,12 +410,14 @@ nav ul li a:hover::after{
     transition: all 0.5s ease-in;
     flex-direction: column;
     text-align: center;
-
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .solutionCard5{
     width: 25%;
-    padding: 100px;
     background: #ffffff;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
     margin-bottom: 25px;
@@ -422,13 +429,15 @@ nav ul li a:hover::after{
     transition: all 0.5s ease-in;
     flex-direction: column;
     text-align: center;
-
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 
 .solutionCard6{
     width: 25%;
-    padding: 100px;
     background: #ffffff;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
     margin-bottom: 25px;
@@ -440,7 +449,10 @@ nav ul li a:hover::after{
     transition: all 0.5s ease-in;
     flex-direction: column;
     text-align: center;
-
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 
